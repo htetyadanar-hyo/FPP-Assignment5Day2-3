@@ -41,8 +41,8 @@ public class Computer {
             return false;
         }
         Computer computer = (Computer) obj;
-        return ramSize == computer.ramSize && Objects.equals(manufacturer, computer.manufacturer) && Objects.equals(processor, computer.processor) && 
-                processorSpeed == computer.processorSpeed;
+        return  Objects.equals(manufacturer, computer.manufacturer) && Objects.equals(processor, computer.processor) && 
+                ramSize == computer.ramSize && processorSpeed == computer.processorSpeed;
     }
 
     @Override
