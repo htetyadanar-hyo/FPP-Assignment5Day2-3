@@ -41,11 +41,12 @@ public class Computer {
             return false;
         }
         Computer computer = (Computer) obj;
-        return ramSize == computer.ramSize && Objects.equals(manufacturer, computer.manufacturer);
+        return ramSize == computer.ramSize && Objects.equals(manufacturer, computer.manufacturer) && Objects.equals(processor, computer.processor) && 
+                processorSpeed == computer.processorSpeed;
     }
 
     @Override
     public int hashCode(){
-        return Objects.hash(ramSize, manufacturer);
+        return Objects.hash(manufacturer,processor,ramSize,processorSpeed);
     }
 }
